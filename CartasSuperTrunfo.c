@@ -64,6 +64,22 @@ printf("Dados da carta 1\n");
     densidade1 = populacao1 / area1;
     percapita1 = (float) pib1 / populacao1;
   // Área para exibição dos dados da cidade
+    printf("Dados da Carta 1\n");
+    printf("Estado: %c\n Codigo da Carta: %s\n", estado, carta);
+    printf("Cidade: %s\n Populacao: %d\n", cidade, populacao);
+    printf("Area: %.2f\n PIB: %.2f\n Pontos turisticos: %d\n ", area, pib, turisticos);
 
+    printf("Densidade demografica: %.2f\n", densidade);
+    
+    printf("Renda Per Capita: %.2f\n", percapita);
+
+    printf("Dados da Carta 2\n");
+    printf("Estado: %c\n Codigo da Carta: %s\n", estado1, carta1);
+    printf("Cidade: %s\n Populacao: %d\n", cidade1, populacao1);
+    printf("Area: %.2f\n PIB: %.2f\n Pontos turisticos: %d\n", area1, pib1, turisticos1);
+
+    printf("Densidade demografica: %.2f\n", densidade1);
+   
+    printf("Renda Per Capita: %.2F\n", percapita1);
 return 0;
 } 
