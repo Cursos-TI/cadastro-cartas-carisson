@@ -38,8 +38,8 @@ printf("Dados da carta 1\n");
 
     printf("Dados da carta 2\n ");
 
-    printf("Digite o estado: ");
-    scanf("%c", &estado1);
+    printf("Digite o Estado: ");
+    scanf("%s", &estado1);
 
     printf("Digite o código da carta: ");
     scanf("%s", &carta1);
