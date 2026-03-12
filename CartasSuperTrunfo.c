@@ -12,6 +12,11 @@ char cidade[20], cidade1[20];
 float area, area1, pib, pib1;
 int populacao, populacao1, turisticos, turisticos1;
 float densidade, percapita, percapita1, densidade1;
+
+float superpoder, superpoder1;
+int comp_pop, comp_area, comp_pib, comp_tur, comp_dens, comp_per, comp_poder;
+
+
   // Área para entrada de dados
 printf("Dados da carta 1\n");
     printf("Digite o estado: ");
@@ -63,6 +68,18 @@ printf("Dados da carta 1\n");
     percapita = (float) pib / populacao;
     densidade1 = populacao1 / area1;
     percapita1 = (float) pib1 / populacao1;
+    superpoder = (float) populacao + area + pib + turisticos + percapita + (1/densidade); 
+    superpoder1 = (float) populacao1 + area1 + pib1 + turisticos1 + percapita1 + (1/densidade1);
+
+    comp_area = area>area1;
+    comp_dens = densidade > densidade1;
+    comp_per = percapita  > percapita1;
+    comp_pib = pib > pib1;
+    comp_poder = superpoder > superpoder1;
+    comp_pop = populacao > populacao1;
+    comp_tur = turisticos > turisticos1;
+
+
   // Área para exibição dos dados da cidade
     printf("Dados da Carta 1\n");
     printf("Estado: %c\n Codigo da Carta: %s\n", estado, carta);
@@ -73,6 +90,8 @@ printf("Dados da carta 1\n");
     
     printf("Renda Per Capita: %.2f\n", percapita);
 
+    printf("O super poder é: %.2f\n", superpoder);
+
     printf("Dados da Carta 2\n");
     printf("Estado: %c\n Codigo da Carta: %s\n", estado1, carta1);
     printf("Cidade: %s\n Populacao: %d\n", cidade1, populacao1);
@@ -81,5 +100,18 @@ printf("Dados da carta 1\n");
     printf("Densidade demografica: %.2f\n", densidade1);
    
     printf("Renda Per Capita: %.2F\n", percapita1);
+
+    printf("O super poder é: %.2f\n", superpoder1);
+
+    printf("Comparação das Cartas, \nconsiderando 1 vence a carta 1 e o vence a carta 2:\n");
+    printf("População: %d\n", comp_pop);
+    printf("Área: %d\n", comp_area);
+    printf("PIB: %d\n", comp_pib);
+    printf("Pontos turisticos: %d\n", comp_tur);
+    printf("Desnidade Populacional: %d\n", comp_dens);
+    printf("PIB per Capita: %d\n", comp_per);
+    printf("Super Poder: %d\n", comp_poder);
+
+
 return 0;
 } 
